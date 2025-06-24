@@ -1,5 +1,6 @@
 # meu_programa.py
 import random
+import string
 
 class EscolhaUsuario:
     def __init__(self, entrada_usuario: int):
@@ -7,7 +8,8 @@ class EscolhaUsuario:
 
     def processar(self):
         if self.entrada == 0:
-            return self.gerar_string_random()
+            saida = ''.join(random.choices(string.ascii_letters, k=10))
+            return saida
         else:
             return "Entrada inválida"
 
